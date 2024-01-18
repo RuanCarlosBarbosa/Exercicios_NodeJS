@@ -33,3 +33,16 @@ let server = createServer((request, response) => {
 server.listen(8000);
 
 console.log("Ouvindo a porta 8000");
+
+// EXPRESS
+
+let express = require('express');
+let app = express();
+
+app.get('/', function(req, res) {
+    res.send("Primeira rota com express");
+});
+
+app.listen(3000, function() {
+    console.log("A aplicação está funcionando.")
+});
